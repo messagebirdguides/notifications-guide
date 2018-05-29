@@ -20,7 +20,7 @@ Birdie NomNom Foods has implemented the following workflow:
 
 To run the application, you will need Node and npm installed on your computer. If they aren't, you can easily install them [here](https://www.npmjs.com/get-npm). There are no other global dependencies (such as databases) for this application.
 
-Next, you can clone or download and extract the source code from [this GitHub repository](https://github.com/).
+Next, you can clone or download and extract the source code from [this GitHub repository](https://github.com/messagebirdguides/notifications-guide).
 
 Let's open a console pointed to the directory into which you've placed the sample application and run the following command to install it:
 
@@ -125,7 +125,7 @@ You now have a running SMS Notifications application!
 
 You can now use the flow, code snippets and UI examples from this tutorial as an inspiration to build your own reminder system.
 
-Running into issues? Explore [the complete code on GitHub](https://github.com/) to see whether you might have missed something. You can now use the flow, code snippets and UI examples from this tutorial as an inspiration to build your own notification system.
+Running into issues? Explore [the complete code on GitHub](https://github.com/messagebirdguides/notifications-guide) to see whether you might have missed something. You can now use the flow, code snippets and UI examples from this tutorial as an inspiration to build your own notification system.
 
 ## Next steps
 
