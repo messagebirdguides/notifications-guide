@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>OmNomNom Foods Order System</title>
+        <style type="text/css">
+            body {
+                font-family:sans-serif;
+            }
+            table {
+                border:solid 1px #aaa;
+                width:100%;
+            }
+            td,th {
+                padding:10px;
+                border:solid 1px #555;
+            }
+            input[type=submit] {
+                border:solid 1px #555;
+                background-color:#ddd;
+                font-size:1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;">OmNomNom Foods Order System</h1>
+        
+        <table>            
+            <tr>
+                <th>Customer Name</th>
+                <th>Customer Phone</th>
+                <th>Foods Ordered</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            {{#each orders}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.items}}</td>
+                <td>{{this.status}}</td>
+                <td>
+                    {{#if (pending this)}}
+                    <form action="/updateOrder" method="post">
+                        <input type="hidden" name="status" value="confirmed" />
+                        <input type="hidden" name="id" value="{{@key}}" />
+                        <input type="submit" value="confirm order" />
+                    </form>
+                    {{/if}}
+                    {{#if (readyForDelivery this)}}
+                    <form action="/updateOrder" method="post">
+                        <input type="hidden" name="status" value="delivered" />
+                        <input type="hidden" name="id" value="{{@key}}" />
+                        <input type="submit" value="mark delivered" />
+                    </form>
+                    {{/if}}
+                    {{#if (confirmed this)}}
+                    <form action="/updateOrder" method="post">
+                        <input type="hidden" name="status" value="delayed" />
+                        <input type="hidden" name="id" value="{{@key}}" />
+                        <input type="submit" value="mark delayed" />
+                    </form>
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+        
+        <p style="text-align:center;">A sample application brought to you by <a href="https://developers.messagebird.com/">MessageBird</a> :)</p>
+    </body>
+</html>
