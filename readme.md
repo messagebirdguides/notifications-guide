@@ -123,8 +123,6 @@ Click on one of the buttons in the _Action_ column to trigger a status change an
 
 You now have a running SMS Notifications application!
 
-You can now use the flow, code snippets and UI examples from this tutorial as an inspiration to build your own reminder system.
-
 Running into issues? Explore [the complete code on GitHub](https://github.com/messagebirdguides/notifications-guide) to see whether you might have missed something. You can now use the flow, code snippets and UI examples from this tutorial as an inspiration to build your own notification system.
 
 ## Next steps
